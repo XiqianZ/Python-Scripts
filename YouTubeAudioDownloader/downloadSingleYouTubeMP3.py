@@ -14,7 +14,8 @@ def download_video(url,output_path=os.path.join(os.getcwd(),DIRECTORY)):
     video = YouTube(url)
     stream = video.streams.filter(file_extension='mp4').first()
     stream.download(output_path=output_path)
+    print(output_path)
     print("Video downloaded successfully")
 
-url = "https://www.youtube.com/watch?v=gzt5G3Gjg6Q"
-download_audio(url)
+url = "https://www.youtube.com/watch?v=MphBWtqbk-Q"
+download_video(url)
